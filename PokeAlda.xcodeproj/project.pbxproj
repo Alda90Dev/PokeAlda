@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B858C9872EA480470089F4A3 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B858C9862EA480470089F4A3 /* NetworkResult.swift */; };
+		B858C9892EA482C40089F4A3 /* NetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B858C9882EA482C40089F4A3 /* NetworkRouter.swift */; };
+		B858C98B2EA484740089F4A3 /* NetworkEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = B858C98A2EA484740089F4A3 /* NetworkEndpoints.swift */; };
+		B858C98D2EA4857A0089F4A3 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B858C98C2EA4857A0089F4A3 /* NetworkManager.swift */; };
+		B858C9902EA4891F0089F4A3 /* Optional+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B858C98F2EA4891F0089F4A3 /* Optional+Extension.swift */; };
 		B8A0A0D22EA4641F0008EE47 /* PokeAldaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A0A0D12EA4641F0008EE47 /* PokeAldaApp.swift */; };
 		B8A0A0D42EA4641F0008EE47 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A0A0D32EA4641F0008EE47 /* ContentView.swift */; };
 		B8A0A0D62EA464210008EE47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8A0A0D52EA464210008EE47 /* Assets.xcassets */; };
@@ -14,6 +19,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B858C9862EA480470089F4A3 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
+		B858C9882EA482C40089F4A3 /* NetworkRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRouter.swift; sourceTree = "<group>"; };
+		B858C98A2EA484740089F4A3 /* NetworkEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkEndpoints.swift; sourceTree = "<group>"; };
+		B858C98C2EA4857A0089F4A3 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		B858C98F2EA4891F0089F4A3 /* Optional+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+Extension.swift"; sourceTree = "<group>"; };
 		B8A0A0CE2EA4641F0008EE47 /* PokeAlda.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokeAlda.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8A0A0D12EA4641F0008EE47 /* PokeAldaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeAldaApp.swift; sourceTree = "<group>"; };
 		B8A0A0D32EA4641F0008EE47 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -32,6 +42,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B858C9852EA480200089F4A3 /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				B858C9862EA480470089F4A3 /* NetworkResult.swift */,
+				B858C9882EA482C40089F4A3 /* NetworkRouter.swift */,
+				B858C98A2EA484740089F4A3 /* NetworkEndpoints.swift */,
+				B858C98C2EA4857A0089F4A3 /* NetworkManager.swift */,
+			);
+			path = NetworkManager;
+			sourceTree = "<group>";
+		};
+		B858C98E2EA489060089F4A3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B858C98F2EA4891F0089F4A3 /* Optional+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		B8A0A0C52EA4641F0008EE47 = {
 			isa = PBXGroup;
 			children = (
@@ -51,6 +80,8 @@
 		B8A0A0D02EA4641F0008EE47 /* PokeAlda */ = {
 			isa = PBXGroup;
 			children = (
+				B858C98E2EA489060089F4A3 /* Extensions */,
+				B858C9852EA480200089F4A3 /* NetworkManager */,
 				B8A0A0D12EA4641F0008EE47 /* PokeAldaApp.swift */,
 				B8A0A0D32EA4641F0008EE47 /* ContentView.swift */,
 				B8A0A0D52EA464210008EE47 /* Assets.xcassets */,
@@ -137,6 +168,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B858C98D2EA4857A0089F4A3 /* NetworkManager.swift in Sources */,
+				B858C9902EA4891F0089F4A3 /* Optional+Extension.swift in Sources */,
+				B858C9872EA480470089F4A3 /* NetworkResult.swift in Sources */,
+				B858C9892EA482C40089F4A3 /* NetworkRouter.swift in Sources */,
+				B858C98B2EA484740089F4A3 /* NetworkEndpoints.swift in Sources */,
 				B8A0A0D42EA4641F0008EE47 /* ContentView.swift in Sources */,
 				B8A0A0D22EA4641F0008EE47 /* PokeAldaApp.swift in Sources */,
 			);
