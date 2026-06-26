@@ -8,7 +8,7 @@
 import Foundation
 
 protocol PokedexRepositoryInterface {
-    func fetchData() async throws -> NetworkResult<String>
+    func fetchData() async throws -> NetworkResult<Pokemon?>
 }
 
 final class PokedexRepository: PokedexRepositoryInterface {
@@ -18,7 +18,7 @@ final class PokedexRepository: PokedexRepositoryInterface {
         self.service = service
     }
     
-    func fetchData() async throws -> NetworkResult<String> {
+    func fetchData() async throws -> NetworkResult<Pokemon?> {
         try await service.fetchData()
     }
 }

@@ -19,7 +19,7 @@ struct PokedexView<ViewModel>: View where ViewModel: PokedexViewModelInterface {
             Image(systemName: "globe")
                 .imageScale(.large)
                 .foregroundStyle(.tint)
-            Text(viewModel.data)
+            Text("\(viewModel.pokemons.count)")
         }
         .padding()
         .task {

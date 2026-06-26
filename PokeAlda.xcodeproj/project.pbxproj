@@ -24,6 +24,7 @@
 		B8DB66052FEE763B00FB3A97 /* PokedexViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DB66042FEE763B00FB3A97 /* PokedexViewModel.swift */; };
 		B8DB66082FEE76F000FB3A97 /* PokedexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DB66072FEE76F000FB3A97 /* PokedexView.swift */; };
 		B8DB660A2FEE77DF00FB3A97 /* PokedexModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DB66092FEE77DF00FB3A97 /* PokedexModule.swift */; };
+		B8DB660D2FEED71900FB3A97 /* PokedexModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DB660C2FEED71900FB3A97 /* PokedexModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		B8DB66042FEE763B00FB3A97 /* PokedexViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokedexViewModel.swift; sourceTree = "<group>"; };
 		B8DB66072FEE76F000FB3A97 /* PokedexView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokedexView.swift; sourceTree = "<group>"; };
 		B8DB66092FEE77DF00FB3A97 /* PokedexModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokedexModule.swift; sourceTree = "<group>"; };
+		B8DB660C2FEED71900FB3A97 /* PokedexModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokedexModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +141,7 @@
 		B8DB65F62FEE739F00FB3A97 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				B8DB660B2FEED70C00FB3A97 /* Model */,
 				B8DB65FA2FEE74AA00FB3A97 /* Repository */,
 				B8DB65F72FEE73B700FB3A97 /* Services */,
 			);
@@ -200,6 +203,14 @@
 				B8DB66072FEE76F000FB3A97 /* PokedexView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		B8DB660B2FEED70C00FB3A97 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B8DB660C2FEED71900FB3A97 /* PokedexModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,6 +297,7 @@
 				B858C9952EA744220089F4A3 /* MaterialEffect.swift in Sources */,
 				B8DB65F92FEE73CD00FB3A97 /* PokedexService.swift in Sources */,
 				B8A0A0D22EA4641F0008EE47 /* PokeAldaApp.swift in Sources */,
+				B8DB660D2FEED71900FB3A97 /* PokedexModel.swift in Sources */,
 				B8DB66052FEE763B00FB3A97 /* PokedexViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

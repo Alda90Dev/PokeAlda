@@ -8,12 +8,12 @@
 import Foundation
 
 protocol PokedexViewModelInterface: ObservableObject {
-    var data: String { get set }
+    var pokemons: [PokemonResult] { get set }
     func fetchData()
 }
 
 final class PokedexViewModel: PokedexViewModelInterface {
-    @Published var data: String = ""
+    @Published var pokemons: [PokemonResult] = []
     private let useCase: PokedexUseCaseInterface
     
     init(useCase: PokedexUseCaseInterface) {
@@ -25,7 +25,7 @@ final class PokedexViewModel: PokedexViewModelInterface {
             let response = try await useCase.fetchData()
             switch response {
             case .success(let data):
-                self.data = data
+                self.pokemons = data
             case .failure(let error):
                 debugPrint(error)
             }

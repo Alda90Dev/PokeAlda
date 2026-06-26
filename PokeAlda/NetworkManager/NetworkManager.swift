@@ -18,7 +18,7 @@ final class NetworkManager {
         session = URLSession(configuration: config)
     }
 
-    private func request<T: Decodable> (with networkRouter: NetworkRouter) async throws -> NetworkResult<T> {
+    public func request<T: Decodable> (with networkRouter: NetworkRouter) async throws -> NetworkResult<T> {
         do {
             let (data, response) = try await URLSession.shared.data(for: networkRouter.request())
             
