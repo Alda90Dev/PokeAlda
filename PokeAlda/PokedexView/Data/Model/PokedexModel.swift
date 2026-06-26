@@ -14,7 +14,8 @@ struct Pokemon: Codable {
     let results: [PokemonResult]?
 }
 
-struct PokemonResult: Codable {
+struct PokemonResult: Codable, Identifiable {
+    let id = UUID()
     let name: String?
     let url: String?
 }

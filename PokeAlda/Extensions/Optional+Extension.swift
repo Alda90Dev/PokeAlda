@@ -9,6 +9,6 @@ import Foundation
 
 extension Optional where Wrapped == String {
     var orEmpty: String {
-        return self ?? ""
+        return self ?? String()
     }
 }
