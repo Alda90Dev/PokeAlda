@@ -20,25 +20,21 @@ struct MainTabView: View {
     
     var body: some View {
         TabView(selection: $currentTab) {
+            
+            Text("Search")
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .background(Color("BG").ignoresSafeArea())
+                .tag(Tab.Types)
+            
             SampleCards(color: .purple, count: 20)
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .background(Color("BG").ignoresSafeArea())
                 .tag(Tab.Home)
             
-            Text("Search")
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .background(Color("BG").ignoresSafeArea())
-                .tag(Tab.Search)
-            
             Text("Notifications")
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .background(Color("BG").ignoresSafeArea())
-                .tag(Tab.Notifications)
-            
-            Text("Account")
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .background(Color("BG").ignoresSafeArea())
-                .tag(Tab.Account)
+                .tag(Tab.Regions)
         }
         .overlay(alignment: .bottom) {
             HStack(alignment: .bottom, spacing: 0) {
@@ -56,6 +52,10 @@ struct MainTabView: View {
         }
         .ignoresSafeArea(.all, edges: .bottom)
         .preferredColorScheme(.dark)
+        .onAppear {
+            let screenSizeWidth = UIScreen.main.bounds.width
+            currentXValue = screenSizeWidth / 2
+        }
     }
     
     @ViewBuilder
@@ -86,24 +86,31 @@ struct MainTabView: View {
                     currentXValue = proxy.frame(in: .global).midX
                 }
             } label: {
-                Image(systemName: tab.rawValue)
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 25, height: 25)
-                    .frame(maxWidth: .infinity)
-                    .foregroundColor(.white)
-                    .padding(currentTab == tab ? 15 : 0)
-                    .background(
-                        ZStack {
-                            if currentTab == tab {
-                                MaterialEffect(style: .systemChromeMaterialDark)
-                                    .clipShape(Circle())
-                                    .matchedGeometryEffect(id: "TAB", in: animation)
+                VStack {
+                    getIconTabView(with: tab)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 25, height: 25)
+                        .frame(maxWidth: .infinity)
+                        .foregroundColor(.white)
+                        .padding(currentTab == tab ? 15 : 0)
+                        .background(
+                            ZStack {
+                                if currentTab == tab {
+                                    MaterialEffect(style: .systemChromeMaterialDark)
+                                        .clipShape(Circle())
+                                        .matchedGeometryEffect(id: "TAB", in: animation)
+                                }
                             }
-                        }
-                    )
-                    .contentShape(Rectangle())
-                    .offset(y: currentTab == tab ? -50 : 0)
+                        )
+                        .contentShape(Rectangle())
+                        .offset(y: currentTab == tab ? -50 : 0)
+                    if currentTab != tab {
+                        Text(tab.title)
+                            .font(.subheadline)
+                            .foregroundStyle(.gray)
+                    }
+                }
             }
             .onAppear {
                 if tab == Tab.allCases.first && currentXValue == 0 {
@@ -113,6 +120,10 @@ struct MainTabView: View {
         }
         .frame(height: 30)
     }
+
+    private func getIconTabView(with tab: Tab) -> Image {
+        return tab == .Home ? Image(tab.rawValue) :  Image(systemName: tab.rawValue)
+    }
 }
 
 #Preview {
@@ -120,10 +131,20 @@ struct MainTabView: View {
 }
 
 enum Tab: String, CaseIterable {
-    case Home = "house.fill"
-    case Search = "magnifyingglass"
-    case Notifications = "bell.fill"
-    case Account = "person.fill"
+    case Types = "pawprint.circle.fill"
+    case Home = "pokebola"
+    case Regions = "map.fill"
+    
+    var title: String {
+        switch self {
+        case .Types:
+            return "Tipos"
+        case .Home:
+            return "Pokedex"
+        case .Regions:
+            return "Regiones"
+        }
+    }
 }
 
 extension View {
