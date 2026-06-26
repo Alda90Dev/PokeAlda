@@ -26,7 +26,7 @@ struct MainTabView: View {
                 .background(Color("BG").ignoresSafeArea())
                 .tag(Tab.Types)
             
-            SampleCards(color: .purple, count: 20)
+            PokedexModule.create()
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .background(Color("BG").ignoresSafeArea())
                 .tag(Tab.Home)
