@@ -11,7 +11,7 @@ import SwiftUI
 struct PokeAldaApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainTabView()
         }
     }
 }
