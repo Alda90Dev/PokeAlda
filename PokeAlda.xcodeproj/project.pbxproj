@@ -15,6 +15,7 @@
 		B858C9932EA73AB50089F4A3 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B858C9922EA73AB50089F4A3 /* MainTabView.swift */; };
 		B858C9952EA744220089F4A3 /* MaterialEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = B858C9942EA744220089F4A3 /* MaterialEffect.swift */; };
 		B858C9972EA748030089F4A3 /* BottomCurve.swift in Sources */ = {isa = PBXBuildFile; fileRef = B858C9962EA748030089F4A3 /* BottomCurve.swift */; };
+		B86039DA2FF10EE100445F16 /* PokemonCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86039D92FF10EE100445F16 /* PokemonCardView.swift */; };
 		B8A0A0D22EA4641F0008EE47 /* PokeAldaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A0A0D12EA4641F0008EE47 /* PokeAldaApp.swift */; };
 		B8A0A0D62EA464210008EE47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8A0A0D52EA464210008EE47 /* Assets.xcassets */; };
 		B8A0A0D92EA464210008EE47 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8A0A0D82EA464210008EE47 /* Preview Assets.xcassets */; };
@@ -36,6 +37,7 @@
 		B858C9922EA73AB50089F4A3 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		B858C9942EA744220089F4A3 /* MaterialEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialEffect.swift; sourceTree = "<group>"; };
 		B858C9962EA748030089F4A3 /* BottomCurve.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomCurve.swift; sourceTree = "<group>"; };
+		B86039D92FF10EE100445F16 /* PokemonCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonCardView.swift; sourceTree = "<group>"; };
 		B8A0A0CE2EA4641F0008EE47 /* PokeAlda.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokeAlda.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8A0A0D12EA4641F0008EE47 /* PokeAldaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeAldaApp.swift; sourceTree = "<group>"; };
 		B8A0A0D52EA464210008EE47 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				B8DB66072FEE76F000FB3A97 /* PokedexView.swift */,
+				B86039D92FF10EE100445F16 /* PokemonCardView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -288,6 +291,7 @@
 				B858C98D2EA4857A0089F4A3 /* NetworkManager.swift in Sources */,
 				B858C9902EA4891F0089F4A3 /* Optional+Extension.swift in Sources */,
 				B858C9972EA748030089F4A3 /* BottomCurve.swift in Sources */,
+				B86039DA2FF10EE100445F16 /* PokemonCardView.swift in Sources */,
 				B8DB65FC2FEE74C300FB3A97 /* PokedexRepository.swift in Sources */,
 				B858C9872EA480470089F4A3 /* NetworkResult.swift in Sources */,
 				B858C9932EA73AB50089F4A3 /* MainTabView.swift in Sources */,
