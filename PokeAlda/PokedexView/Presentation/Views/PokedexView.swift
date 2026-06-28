@@ -113,7 +113,7 @@ struct PokemonCardView: View {
                     .font(.caption)
                     .foregroundStyle(.gray)
                 Spacer()
-                Text(pokemon.name.orEmpty)
+                Text(pokemon.name)
                     .font(.subheadline)
                     .fontWeight(.medium)
                     .foregroundStyle(.black)

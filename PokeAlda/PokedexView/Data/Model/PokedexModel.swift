@@ -11,15 +11,15 @@ struct PokemonResponse: Codable {
     let count: Int?
     let next: String?
     let previous: String?
-    let results: [Pokemon]?
+    let results: [PokemonResult]?
 }
 
-struct Pokemon: Codable, Hashable {
+struct PokemonResult: Codable {
     let name: String?
     let url: String?
 }
 
-extension Pokemon {
+extension PokemonResult {
     var id: String {
         return String(url?.split(separator: "/").last ?? "")
     }
@@ -27,4 +27,10 @@ extension Pokemon {
     var urlImage: String {
         return "\(NetworkRouter.baseImageURLString)\(id).png"
     }
+}
+
+struct Pokemon: Hashable {
+    let id: String
+    let name: String
+    let urlImage: String
 }

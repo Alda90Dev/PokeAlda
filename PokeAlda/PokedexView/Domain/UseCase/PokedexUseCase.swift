@@ -25,7 +25,8 @@ final class PokedexUseCase: PokedexUseCaseInterface {
         switch response {
         case .success(let response):
             self.pokemonResponse = response
-            return .success(data: response?.results ?? [])
+            let pokemons = response?.results?.map { Pokemon(id: $0.id, name: $0.name.orEmpty, urlImage: $0.urlImage) }
+            return .success(data: pokemons ?? [])
         case .failure(let error):
             return .failure(error: error)
         }
