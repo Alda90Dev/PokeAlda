@@ -56,7 +56,7 @@ struct PokedexView<ViewModel>: View where ViewModel: PokedexViewModelInterface {
                 
                 ScrollView {
                     LazyVGrid(columns: columns, spacing: 20) {
-                        ForEach(viewModel.pokemons) { pokemon in
+                        ForEach(viewModel.pokemons, id: \.self) { pokemon in
                             PokemonCardView(pokemon: pokemon)
                         }
                     }
@@ -76,7 +76,7 @@ struct PokedexView<ViewModel>: View where ViewModel: PokedexViewModelInterface {
 }
 
 struct PokemonCardView: View {
-    let pokemon: PokemonResult
+    let pokemon: Pokemon
     
     var body: some View {
         VStack(spacing: 0) {
@@ -88,13 +88,28 @@ struct PokemonCardView: View {
                 )
                 .frame(height: 130)
                 .overlay {
-                    Image(systemName: "photo")
-                        .font(.largeTitle)
-                        .foregroundStyle(.white)
+                    AsyncImage(url: URL(string: pokemon.urlImage)) { phase in
+                        switch phase {
+                        case .empty:
+                            ProgressView()
+                        case .success(let image):
+                            image
+                                .resizable()
+                                .scaledToFit()
+
+                        case .failure:
+                            Image(systemName: "photo")
+                              .font(.largeTitle)
+                              .foregroundStyle(.white)
+                        @unknown default:
+                            EmptyView()
+                        }
+                    }
+                    
                 }
             
             HStack {
-                Text("Number")
+                Text("#\(pokemon.id)")
                     .font(.caption)
                     .foregroundStyle(.gray)
                 Spacer()

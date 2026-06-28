@@ -14,6 +14,7 @@ struct NetworkRouter {
     let method: HTTPMethod
     
     private static let baseURLString: String = "https://pokeapi.co/api/v2/"
+    static var baseImageURLString: String = "https://raw.githubusercontent.com/PokeAPI/sprites/refs/heads/master/sprites/pokemon/other/home/"
     
     var bodyData: Data? {
         guard let body = body else { return nil }

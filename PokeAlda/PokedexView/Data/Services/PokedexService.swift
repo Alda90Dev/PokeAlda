@@ -8,13 +8,13 @@
 import Foundation
 
 protocol PokedexServiceInterface {
-    func fetchData() async throws -> NetworkResult<Pokemon?>
+    func fetchData() async throws -> NetworkResult<PokemonResponse?>
 }
 
 final class PokedexService: PokedexServiceInterface {
     
-    func fetchData() async throws -> NetworkResult<Pokemon?> {
-        let result: NetworkResult<Pokemon?> = try await NetworkManager.shared.request(with: NetworkEndpoints.Get.pokemon.path)
+    func fetchData() async throws -> NetworkResult<PokemonResponse?> {
+        let result: NetworkResult<PokemonResponse?> = try await NetworkManager.shared.request(with: NetworkEndpoints.Get.pokemon.path)
         return result
     }
 }

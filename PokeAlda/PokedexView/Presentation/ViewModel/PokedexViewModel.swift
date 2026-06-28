@@ -8,12 +8,12 @@
 import Foundation
 
 protocol PokedexViewModelInterface: ObservableObject {
-    var pokemons: [PokemonResult] { get set }
+    var pokemons: [Pokemon] { get set }
     func fetchData()
 }
 
 final class PokedexViewModel: PokedexViewModelInterface {
-    @Published var pokemons: [PokemonResult] = []
+    @Published var pokemons: [Pokemon] = []
     private let useCase: PokedexUseCaseInterface
     
     init(useCase: PokedexUseCaseInterface) {
