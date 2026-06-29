@@ -16,6 +16,8 @@
 		B858C9952EA744220089F4A3 /* MaterialEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = B858C9942EA744220089F4A3 /* MaterialEffect.swift */; };
 		B858C9972EA748030089F4A3 /* BottomCurve.swift in Sources */ = {isa = PBXBuildFile; fileRef = B858C9962EA748030089F4A3 /* BottomCurve.swift */; };
 		B86039DA2FF10EE100445F16 /* PokemonCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86039D92FF10EE100445F16 /* PokemonCardView.swift */; };
+		B86039DD2FF111F500445F16 /* ImageCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86039DC2FF111F500445F16 /* ImageCacheManager.swift */; };
+		B86039E02FF112DD00445F16 /* CachedAasyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86039DF2FF112DD00445F16 /* CachedAasyncImage.swift */; };
 		B8A0A0D22EA4641F0008EE47 /* PokeAldaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A0A0D12EA4641F0008EE47 /* PokeAldaApp.swift */; };
 		B8A0A0D62EA464210008EE47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8A0A0D52EA464210008EE47 /* Assets.xcassets */; };
 		B8A0A0D92EA464210008EE47 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8A0A0D82EA464210008EE47 /* Preview Assets.xcassets */; };
@@ -38,6 +40,8 @@
 		B858C9942EA744220089F4A3 /* MaterialEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialEffect.swift; sourceTree = "<group>"; };
 		B858C9962EA748030089F4A3 /* BottomCurve.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomCurve.swift; sourceTree = "<group>"; };
 		B86039D92FF10EE100445F16 /* PokemonCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonCardView.swift; sourceTree = "<group>"; };
+		B86039DC2FF111F500445F16 /* ImageCacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheManager.swift; sourceTree = "<group>"; };
+		B86039DF2FF112DD00445F16 /* CachedAasyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachedAasyncImage.swift; sourceTree = "<group>"; };
 		B8A0A0CE2EA4641F0008EE47 /* PokeAlda.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokeAlda.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8A0A0D12EA4641F0008EE47 /* PokeAldaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeAldaApp.swift; sourceTree = "<group>"; };
 		B8A0A0D52EA464210008EE47 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -91,6 +95,22 @@
 			path = MainTabView;
 			sourceTree = "<group>";
 		};
+		B86039DB2FF111CB00445F16 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				B86039DC2FF111F500445F16 /* ImageCacheManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		B86039DE2FF1129D00445F16 /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+				B86039DF2FF112DD00445F16 /* CachedAasyncImage.swift */,
+			);
+			path = UIComponents;
+			sourceTree = "<group>";
+		};
 		B8A0A0C52EA4641F0008EE47 = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +130,8 @@
 		B8A0A0D02EA4641F0008EE47 /* PokeAlda */ = {
 			isa = PBXGroup;
 			children = (
+				B86039DE2FF1129D00445F16 /* UIComponents */,
+				B86039DB2FF111CB00445F16 /* Managers */,
 				B8DB65F52FEE738400FB3A97 /* PokedexView */,
 				B858C9912EA73AA50089F4A3 /* MainTabView */,
 				B858C98E2EA489060089F4A3 /* Extensions */,
@@ -288,6 +310,8 @@
 			files = (
 				B8DB66012FEE75A000FB3A97 /* PokedexUseCase.swift in Sources */,
 				B8DB66082FEE76F000FB3A97 /* PokedexView.swift in Sources */,
+				B86039DD2FF111F500445F16 /* ImageCacheManager.swift in Sources */,
+				B86039E02FF112DD00445F16 /* CachedAasyncImage.swift in Sources */,
 				B858C98D2EA4857A0089F4A3 /* NetworkManager.swift in Sources */,
 				B858C9902EA4891F0089F4A3 /* Optional+Extension.swift in Sources */,
 				B858C9972EA748030089F4A3 /* BottomCurve.swift in Sources */,

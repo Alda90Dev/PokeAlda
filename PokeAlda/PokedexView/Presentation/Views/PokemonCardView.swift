@@ -20,24 +20,17 @@ struct PokemonCardView: View {
                 )
                 .frame(height: 130)
                 .overlay {
-                    AsyncImage(url: URL(string: pokemon.urlImage)) { phase in
-                        switch phase {
-                        case .empty:
-                            ProgressView()
-                        case .success(let image):
-                            image
-                                .resizable()
-                                .scaledToFit()
-
-                        case .failure:
+                    CachedAsyncImage(url: URL(string: pokemon.urlImage)) { phase in
+                        if let image = phase.image {
+                            image.resizable().scaledToFit()
+                        } else if phase.error != nil {
                             Image(systemName: "photo")
                               .font(.largeTitle)
                               .foregroundStyle(.white)
-                        @unknown default:
-                            EmptyView()
+                        } else {
+                            ProgressView() // Loading placeholder
                         }
                     }
-                    
                 }
             
             HStack {
