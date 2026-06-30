@@ -11,11 +11,6 @@ struct PokedexView<ViewModel>: View where ViewModel: PokedexViewModelInterface {
     @ObservedObject private var viewModel: ViewModel
     @State private var searchText = ""
     
-    private let columns = [
-        GridItem(.flexible()),
-        GridItem(.flexible())
-    ]
-    
     init(viewModel: ViewModel) {
         self.viewModel = viewModel
     }
@@ -36,7 +31,16 @@ struct PokedexView<ViewModel>: View where ViewModel: PokedexViewModelInterface {
                         TextField("",
                                   text: $searchText,  
                                   prompt: Text("Search Pokémon")
-                                            .foregroundColor(.gray))
+                                            .foregroundColor(.gray)
+                        )
+                        .onChange(of: searchText) { _, newValue in
+                            self.viewModel.filterPokemons(by: searchText)
+                        }
+                        .submitLabel(.search)
+                        .onSubmit {
+                            debugPrint("Submited")
+                           // viewModel.search()
+                        }
                     }
                     .foregroundStyle(.gray)
                     .padding(.horizontal)
@@ -54,23 +58,21 @@ struct PokedexView<ViewModel>: View where ViewModel: PokedexViewModelInterface {
                 }
                 .padding(.horizontal)
                 
-                ScrollView {
-                    LazyVGrid(columns: columns, spacing: 20) {
-                        ForEach(viewModel.pokemons, id: \.self) { pokemon in
-                            PokemonCardView(pokemon: pokemon)
-                        }
-                    }
-                    .padding()
-                }
+                listItemsView
             }
             .padding(.bottom, 40)
             .task {
-                await fetchData()
+                await loadData()
             }
         }
     }
     
-    private func fetchData() async {
-        viewModel.fetchData()
+    @ViewBuilder
+    private var listItemsView: some View {
+        ListItemsView(viewModel: viewModel.listItemsViewModel)
+    }
+    
+    private func loadData() async {
+        viewModel.loadData()
     }
 }

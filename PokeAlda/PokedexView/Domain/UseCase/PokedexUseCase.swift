@@ -9,6 +9,7 @@ import Foundation
 
 protocol PokedexUseCaseInterface {
     func fetchData() async throws -> NetworkResult<[Pokemon]>
+    func fecthNextData() async throws -> NetworkResult<[Pokemon]>
 }
 
 final class PokedexUseCase: PokedexUseCaseInterface {
@@ -25,10 +26,26 @@ final class PokedexUseCase: PokedexUseCaseInterface {
         switch response {
         case .success(let response):
             self.pokemonResponse = response
-            let pokemons = response?.results?.map { Pokemon(id: $0.id, name: $0.name.orEmpty, urlImage: $0.urlImage) }
-            return .success(data: pokemons ?? [])
+            let pokemons = response?.results?.map { Pokemon(id: $0.id, name: $0.name.orEmpty, urlImage: $0.urlImage) } ?? []
+            return .success(data: pokemons)
         case .failure(let error):
             return .failure(error: error)
         }
+    }
+    
+    func fecthNextData() async throws -> NetworkResult<[Pokemon]> {
+        guard let next = pokemonResponse?.next else {
+            return .success(data: [])
+        }
+        let response = try await repository.fetchData(with: next)
+        switch response {
+        case .success(let response):
+            self.pokemonResponse = response
+            let pokemons = response?.results?.map { Pokemon(id: $0.id, name: $0.name.orEmpty, urlImage: $0.urlImage) } ?? []
+            return .success(data: pokemons)
+        case .failure(let error):
+            return .failure(error: error)
+        }
+        
     }
 }

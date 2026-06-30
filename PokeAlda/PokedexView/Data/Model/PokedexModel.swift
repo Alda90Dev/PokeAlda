@@ -29,7 +29,7 @@ extension PokemonResult {
     }
 }
 
-struct Pokemon: Hashable {
+public struct Pokemon: Hashable {
     let id: String
     let name: String
     let urlImage: String
