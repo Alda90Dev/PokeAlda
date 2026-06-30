@@ -125,6 +125,23 @@
 			path = ListItemsView;
 			sourceTree = "<group>";
 		};
+		B86039E62FF3A6C000445F16 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				B86039E72FF3A6E300445F16 /* Types */,
+				B858C9912EA73AA50089F4A3 /* MainTabView */,
+				B8DB65F52FEE738400FB3A97 /* Pokedex */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		B86039E72FF3A6E300445F16 /* Types */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Types;
+			sourceTree = "<group>";
+		};
 		B8A0A0C52EA4641F0008EE47 = {
 			isa = PBXGroup;
 			children = (
@@ -144,10 +161,9 @@
 		B8A0A0D02EA4641F0008EE47 /* PokeAlda */ = {
 			isa = PBXGroup;
 			children = (
+				B86039E62FF3A6C000445F16 /* Modules */,
 				B86039DE2FF1129D00445F16 /* UIComponents */,
 				B86039DB2FF111CB00445F16 /* Managers */,
-				B8DB65F52FEE738400FB3A97 /* PokedexView */,
-				B858C9912EA73AA50089F4A3 /* MainTabView */,
 				B858C98E2EA489060089F4A3 /* Extensions */,
 				B858C9852EA480200089F4A3 /* NetworkManager */,
 				B8A0A0D12EA4641F0008EE47 /* PokeAldaApp.swift */,
@@ -165,7 +181,7 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		B8DB65F52FEE738400FB3A97 /* PokedexView */ = {
+		B8DB65F52FEE738400FB3A97 /* Pokedex */ = {
 			isa = PBXGroup;
 			children = (
 				B8DB66022FEE761D00FB3A97 /* Presentation */,
@@ -173,7 +189,7 @@
 				B8DB65F62FEE739F00FB3A97 /* Data */,
 				B8DB66092FEE77DF00FB3A97 /* PokedexModule.swift */,
 			);
-			path = PokedexView;
+			path = Pokedex;
 			sourceTree = "<group>";
 		};
 		B8DB65F62FEE739F00FB3A97 /* Data */ = {
