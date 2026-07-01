@@ -10,11 +10,14 @@ import Foundation
 enum NetworkEndpoints {
     enum Get {
         case pokemon
+        case type
         
         var path: NetworkRouter {
             switch self {
             case .pokemon:
                 return NetworkRouter(path: "pokemon", method: .get)
+            case .type:
+                return NetworkRouter(path: "type", method: .get)
             }
         }
     }

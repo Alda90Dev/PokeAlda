@@ -21,7 +21,7 @@ struct MainTabView: View {
     var body: some View {
         TabView(selection: $currentTab) {
             
-            Text("Search")
+            TypesModule.create()
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .background(Color("BG").ignoresSafeArea())
                 .tag(Tab.Types)

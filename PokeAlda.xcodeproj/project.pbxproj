@@ -20,6 +20,14 @@
 		B86039E02FF112DD00445F16 /* CachedAasyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86039DF2FF112DD00445F16 /* CachedAasyncImage.swift */; };
 		B86039E32FF39CA700445F16 /* ListItemsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86039E22FF39CA700445F16 /* ListItemsViewModel.swift */; };
 		B86039E52FF39EB500445F16 /* ListItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86039E42FF39EB500445F16 /* ListItemsView.swift */; };
+		B86039E92FF3A7D600445F16 /* TypesWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86039E82FF3A7D600445F16 /* TypesWorker.swift */; };
+		B86039EB2FF3A81300445F16 /* TypesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86039EA2FF3A81300445F16 /* TypesModel.swift */; };
+		B86039ED2FF3A93300445F16 /* TypesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86039EC2FF3A93300445F16 /* TypesInteractor.swift */; };
+		B86039EF2FF3AA7C00445F16 /* TypesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86039EE2FF3AA7C00445F16 /* TypesPresenter.swift */; };
+		B86039F12FF3AB8800445F16 /* TypesDisplayLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86039F02FF3AB8800445F16 /* TypesDisplayLogic.swift */; };
+		B86039F32FF3B19000445F16 /* TypesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86039F22FF3B19000445F16 /* TypesView.swift */; };
+		B86039F52FF3B5FC00445F16 /* TypesModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86039F42FF3B5FC00445F16 /* TypesModule.swift */; };
+		B86039F72FF3BB5500445F16 /* TypesInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86039F62FF3BB5500445F16 /* TypesInterfaces.swift */; };
 		B8A0A0D22EA4641F0008EE47 /* PokeAldaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A0A0D12EA4641F0008EE47 /* PokeAldaApp.swift */; };
 		B8A0A0D62EA464210008EE47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8A0A0D52EA464210008EE47 /* Assets.xcassets */; };
 		B8A0A0D92EA464210008EE47 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8A0A0D82EA464210008EE47 /* Preview Assets.xcassets */; };
@@ -46,6 +54,14 @@
 		B86039DF2FF112DD00445F16 /* CachedAasyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachedAasyncImage.swift; sourceTree = "<group>"; };
 		B86039E22FF39CA700445F16 /* ListItemsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemsViewModel.swift; sourceTree = "<group>"; };
 		B86039E42FF39EB500445F16 /* ListItemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemsView.swift; sourceTree = "<group>"; };
+		B86039E82FF3A7D600445F16 /* TypesWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypesWorker.swift; sourceTree = "<group>"; };
+		B86039EA2FF3A81300445F16 /* TypesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypesModel.swift; sourceTree = "<group>"; };
+		B86039EC2FF3A93300445F16 /* TypesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypesInteractor.swift; sourceTree = "<group>"; };
+		B86039EE2FF3AA7C00445F16 /* TypesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypesPresenter.swift; sourceTree = "<group>"; };
+		B86039F02FF3AB8800445F16 /* TypesDisplayLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypesDisplayLogic.swift; sourceTree = "<group>"; };
+		B86039F22FF3B19000445F16 /* TypesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypesView.swift; sourceTree = "<group>"; };
+		B86039F42FF3B5FC00445F16 /* TypesModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypesModule.swift; sourceTree = "<group>"; };
+		B86039F62FF3BB5500445F16 /* TypesInterfaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypesInterfaces.swift; sourceTree = "<group>"; };
 		B8A0A0CE2EA4641F0008EE47 /* PokeAlda.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokeAlda.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8A0A0D12EA4641F0008EE47 /* PokeAldaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeAldaApp.swift; sourceTree = "<group>"; };
 		B8A0A0D52EA464210008EE47 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -138,6 +154,14 @@
 		B86039E72FF3A6E300445F16 /* Types */ = {
 			isa = PBXGroup;
 			children = (
+				B86039EA2FF3A81300445F16 /* TypesModel.swift */,
+				B86039E82FF3A7D600445F16 /* TypesWorker.swift */,
+				B86039EC2FF3A93300445F16 /* TypesInteractor.swift */,
+				B86039EE2FF3AA7C00445F16 /* TypesPresenter.swift */,
+				B86039F02FF3AB8800445F16 /* TypesDisplayLogic.swift */,
+				B86039F22FF3B19000445F16 /* TypesView.swift */,
+				B86039F42FF3B5FC00445F16 /* TypesModule.swift */,
+				B86039F62FF3BB5500445F16 /* TypesInterfaces.swift */,
 			);
 			path = Types;
 			sourceTree = "<group>";
@@ -341,22 +365,30 @@
 				B8DB66012FEE75A000FB3A97 /* PokedexUseCase.swift in Sources */,
 				B8DB66082FEE76F000FB3A97 /* PokedexView.swift in Sources */,
 				B86039DD2FF111F500445F16 /* ImageCacheManager.swift in Sources */,
+				B86039F52FF3B5FC00445F16 /* TypesModule.swift in Sources */,
 				B86039E02FF112DD00445F16 /* CachedAasyncImage.swift in Sources */,
 				B858C98D2EA4857A0089F4A3 /* NetworkManager.swift in Sources */,
 				B86039E32FF39CA700445F16 /* ListItemsViewModel.swift in Sources */,
 				B858C9902EA4891F0089F4A3 /* Optional+Extension.swift in Sources */,
 				B858C9972EA748030089F4A3 /* BottomCurve.swift in Sources */,
+				B86039ED2FF3A93300445F16 /* TypesInteractor.swift in Sources */,
+				B86039EF2FF3AA7C00445F16 /* TypesPresenter.swift in Sources */,
 				B86039DA2FF10EE100445F16 /* PokemonCardView.swift in Sources */,
 				B8DB65FC2FEE74C300FB3A97 /* PokedexRepository.swift in Sources */,
 				B858C9872EA480470089F4A3 /* NetworkResult.swift in Sources */,
+				B86039EB2FF3A81300445F16 /* TypesModel.swift in Sources */,
 				B858C9932EA73AB50089F4A3 /* MainTabView.swift in Sources */,
+				B86039F72FF3BB5500445F16 /* TypesInterfaces.swift in Sources */,
 				B86039E52FF39EB500445F16 /* ListItemsView.swift in Sources */,
 				B858C9892EA482C40089F4A3 /* NetworkRouter.swift in Sources */,
+				B86039F12FF3AB8800445F16 /* TypesDisplayLogic.swift in Sources */,
+				B86039F32FF3B19000445F16 /* TypesView.swift in Sources */,
 				B858C98B2EA484740089F4A3 /* NetworkEndpoints.swift in Sources */,
 				B8DB660A2FEE77DF00FB3A97 /* PokedexModule.swift in Sources */,
 				B858C9952EA744220089F4A3 /* MaterialEffect.swift in Sources */,
 				B8DB65F92FEE73CD00FB3A97 /* PokedexService.swift in Sources */,
 				B8A0A0D22EA4641F0008EE47 /* PokeAldaApp.swift in Sources */,
+				B86039E92FF3A7D600445F16 /* TypesWorker.swift in Sources */,
 				B8DB660D2FEED71900FB3A97 /* PokedexModel.swift in Sources */,
 				B8DB66052FEE763B00FB3A97 /* PokedexViewModel.swift in Sources */,
 			);
